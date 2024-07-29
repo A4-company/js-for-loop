@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Table with JavaScript Loops</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Person Details</h1>
+        <div class="filters">
+            <label for="ageFilter">Filter by <br>Age:</label>
+            <input type="number" id="ageFilter" placeholder="Enter age">
+            <label for="genderFilter"><br>Gender:</label>
+            <select id="genderFilter">
+                <option value="">All</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <button onclick="applyFilters()">Filter</button>
+        </div>
+        <table id="personTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Contact Number</th>
+                    <th>Email</th>
+                    <th>Instagram</th>
+                    <th>Facebook</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be injected here dynamically -->
+            </tbody>
+        </table>
+        <div class="pagination">
+            <button onclick="prevPage()" id="prevButton">Previous</button>
+            <span id="pageInfo"></span>
+            <button onclick="nextPage()" id="nextButton">Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
